@@ -1,6 +1,3 @@
-# js-exam-template
-SoftUni JS Web development course
-
 # SoftUni JS Back-End Exam Preparation Cheat Sheet
 
 1. Initialize Project
