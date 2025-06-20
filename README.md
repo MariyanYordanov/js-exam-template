@@ -1,7 +1,7 @@
 # SoftUni JS Back-End Exam Preparation Cheat Sheet
 
 1. Initialize Project
- - [ ] Init npm project `npm init --yes`
+ - [x] Init npm project `npm init --yes`
  - [ ] Change module system
  - [ ] Add start file `/src/index.js`
  - [ ] Add Dev Script
