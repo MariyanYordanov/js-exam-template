@@ -37,8 +37,8 @@
  - [x] Add user controller
  - [x] Add register page
  - [x] Modify register form
- - [ ] Create post register action
- - [ ] Add user service with register
+ - [x] Create post register action
+ - [x] Add user service with register
  - [ ] Hash password
  - [ ] Check rePassword
  - [ ] Check if user exists
