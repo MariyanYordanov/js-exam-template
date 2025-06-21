@@ -2,12 +2,13 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import express from "express";
+import session from "express-session";
+import cookieParser from "cookie-parser";
 import connectDB from "./config/db.js";
 import hbsConfig from "./config/hbs.js";
-import cookieParser from "cookie-parser";
-import { auth } from "./middlewares/authMiddleware.js";
 import routes from "./routes.js";
-import session from "express-session";
+import { auth } from "./middlewares/authMiddleware.js";
+import { tempDataMiddleware } from "./middlewares/tempDataMiddleware.js";
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use(session({
     }
 }));
 app.use(express.urlencoded({ extended: true }));
+app.use(tempDataMiddleware);
 app.use(auth);
 
 hbsConfig(app);
