@@ -7,7 +7,6 @@ function hbsConfig(app) {
             allowProtoPropertiesByDefault: true,
             allowProtoMethodsByDefault: true
         },
-        helpers: {},
     }));
 
     app.set('view engine', 'hbs');

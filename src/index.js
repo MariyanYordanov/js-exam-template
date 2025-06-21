@@ -7,11 +7,21 @@ import hbsConfig from "./config/hbs.js";
 import cookieParser from "cookie-parser";
 import { auth } from "./middlewares/authMiddleware.js";
 import routes from "./routes.js";
+import session from "express-session";
 
 const app = express();
 
 app.use(express.static('src/public'));
 app.use(cookieParser());
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        httpOnly: true,
+        maxAge: 3_600_000
+    }
+}));
 app.use(express.urlencoded({ extended: true }));
 app.use(auth);
 

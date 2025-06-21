@@ -20,7 +20,7 @@
  - [x] Config handlebars as view enging
  - [x] Config views file extensions
  - [x] Change views directory
- - [ ] Add resources to views folder
+ - [x] Add resources to views folder
  - [x] Add home view
  - [x] Add layout
  - [x] Add partials dir
@@ -49,7 +49,7 @@
  - [x] Use cookie parser middleware
  - [x] Add login view
  - [x] Add login page
- - [ ] Fix login form 
+ - [x] Fix login form 
  - [x] Add login post action
  - [x] Add login method to user service
  - [x] Validate user on login
@@ -64,15 +64,15 @@
 8. Authentication
  - [x] Auth middleware
  - [x] Use auth middleware
- - [] Check if guest
- - [ ] Verify token
+ - [x] Check if guest
+ - [x] Verify token
  - [x] Handle invalid token
- - [ ] Attach user to request
- - [ ] Attach user data to handlebars context
+ - [x] Attach user to request
+ - [x] Attach user data to handlebars context
 9. Authorization
  - [x] Create isAuth middleware
- - [ ] Create isGuest middleware
- - [w] Add route guards
+ - [x] Create isGuest middleware
+ - [x] Add route guards
 10. Dynamic content
  - [x] Dynamic navigation
  - [x] Dynamic titles
@@ -84,7 +84,7 @@
  - [ ] Persist form data in register form
  - [ ] Add error handling for login
  - [ ] Persist form data in login form
-11. Bonuses
+12. Bonuses
  - [ ] Set page title from view
  - [ ] Export helpers to external file
  - [ ] Temp data
