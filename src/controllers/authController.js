@@ -4,13 +4,13 @@ import { getErrorMessage } from "../utils/errorUtils.js";
 
 const authController = Router();
 
-authController.get("/register", (req, res) => {
+authController.get("auth/register", (req, res) => {
 
-    res.render("register", { pageTitle: "Register" });
+    res.render("auth/register", { pageTitle: "Register" });
 
 });
 
-authController.post("/register", async (req, res) => {
+authController.post("auth/register", async (req, res) => {
 
     const { email, password, rePassword } = req.body;
 
@@ -27,7 +27,7 @@ authController.post("/register", async (req, res) => {
 
         const errorMessage = getErrorMessage(err);
 
-        res.status(400).render("register", {
+        res.status(400).render("auth/register", {
             error: errorMessage,
             email,
             pageTitle: "Register"
@@ -35,13 +35,13 @@ authController.post("/register", async (req, res) => {
     }
 });
 
-authController.get("/login", (req, res) => {
+authController.get("auth/login", (req, res) => {
 
-    res.render("login", { pageTitle: "Login" });
+    res.render("auth/login", { pageTitle: "Login" });
 
 });
 
-authController.post("/login", async (req, res) => {
+authController.post("auth/login", async (req, res) => {
 
     const { email, password } = req.body;
 
@@ -49,7 +49,7 @@ authController.post("/login", async (req, res) => {
 
         const errorMessage = getErrorMessage(err);
 
-        res.status(400).render("login", {
+        res.status(400).render("auth/login", {
             error: errorMessage,
             email,
             pageTitle: "Login"
@@ -69,7 +69,7 @@ authController.post("/login", async (req, res) => {
 
         const errorMessage = getErrorMessage(err);
 
-        res.status(400).render("login", {
+        res.status(400).render("auth/login", {
             error: errorMessage,
             email,
             pageTitle: "Login"
@@ -77,7 +77,7 @@ authController.post("/login", async (req, res) => {
     }
 });
 
-authController.get("/logout", (req, res) => {
+authController.get("auth/logout", (req, res) => {
     authService.logout(req, res);
     res.redirect("/");
 });
