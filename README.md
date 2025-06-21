@@ -77,21 +77,20 @@
  - [x] Dynamic navigation
  - [x] Dynamic titles
 11. Error Handling
- - [ ] Add notification
- - [ ] Error message in notification
- - [ ] Add error message util
- - [ ] Add error handling for register
- - [ ] Persist form data in register form
- - [ ] Add error handling for login
- - [ ] Persist form data in login form
+ - [x] Add notification
+ - [x] Error message in notification
+ - [x] Add error message util
+ - [x] Add error handling for register
+ - [x] Persist form data in register form
+ - [x] Add error handling for login
+ - [x] Persist form data in login form
 12. Bonuses
- - [ ] Set page title from view
- - [ ] Export helpers to external file
- - [ ] Temp data
-   - [ ] Install express session
-   - [ ] Use express session
-   - [ ] Add temp data middleware
-   - [ ] Use temp data middleware
- - [ ] Async jsonwebtoken
- - [ ] Add type declaration for promisified jsonwebtoken
+ - [x] Set page title from view
+ - [x] Export helpers to external file
+ - [x] Temp data
+   - [x] Install express-session
+   - [x] Use express-session
+   - [x] Add temp data middleware
+   - [x] Use temp data middleware
+
     
