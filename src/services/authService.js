@@ -36,6 +36,8 @@ async function login(email, password) {
 
     const token = generateToken(user);
 
+    console.log('User login successfully!');
+
     return token;
 }
 
