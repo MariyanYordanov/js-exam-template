@@ -2,7 +2,7 @@
 
 1. Initialize Project
  - [x] Init npm project `npm init --yes`
- - [ ] Change module system
+ - [x] Change module system
  - [ ] Add start file `/src/index.js`
  - [ ] Add Dev Script
  - [ ] Config Debugging
