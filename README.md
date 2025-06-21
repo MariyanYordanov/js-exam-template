@@ -19,17 +19,17 @@
  - [x] Install handlebars `npm i express-handlebars`
  - [x] Config handlebars as view enging
  - [x] Config views file extensions
- - [ ] Change views directory
+ - [x] Change views directory
  - [ ] Add resources to views folder
- - [ ] Add home view
- - [ ] Add layout
- - [ ] Add partials dir
- - [ ] Config handlebars to read mongoose documents
+ - [x] Add home view
+ - [x] Add layout
+ - [x] Add partials dir
+ - [x] Config handlebars to read mongoose documents
 4. Database
- - [ ] Install mongoose `npm i mongoose`
- - [ ] Setup db connection
- - [ ] Setup db connection error handling
- - [ ] Add basic user model
+ - [x] Install mongoose `npm i mongoose`
+ - [x] Setup db connection
+ - [x] Setup db connection error handling
+ - [x] Add basic user model
 5. Register
  - [ ] Install bcrypt `npm i bcrypt`
  - [ ] Fix navigation links
