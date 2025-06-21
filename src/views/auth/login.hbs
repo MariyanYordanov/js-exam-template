@@ -1,0 +1,8 @@
+
+<h1>Login</h1>
+{{> partials/nav }}
+<form action="/auth/login" method="POST">
+    <input type="text" name="email" placeholder="Email" value="{{email}}">
+    <input type="password" name="password" placeholder="Password">
+    <button type="submit">Login</button>
+</form>

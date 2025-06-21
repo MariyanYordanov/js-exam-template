@@ -31,12 +31,12 @@
  - [x] Setup db connection error handling
  - [x] Add basic user model
 5. Register
- - [ь] Install bcrypt `npm i bcrypt`
- - [ ] Fix navigation links
- - [ ] Add register view
- - [ ] Add user controller
- - [ ] Add register page
- - [ ] Modify register form
+ - [x] Install bcrypt `npm i bcrypt`
+ - [x] Fix navigation links
+ - [x] Add register view
+ - [x] Add user controller
+ - [x] Add register page
+ - [x] Modify register form
  - [ ] Create post register action
  - [ ] Add user service with register
  - [ ] Hash password
