@@ -57,16 +57,16 @@
  - [x] Add JWT_SECRET to global config file
  - [x] Generate jwt token
  - [x] Attach token to cookie
- - [ ] Login User
- - [ ] Auto login on register
+ - [x] Login User
+ - [x] Auto login on register
 7. Logout
- - [ ] Add logout action
+ - [x] Add logout action
 8. Authentication
- - [ ] Auth middleware
- - [ ] Use auth middleware
- - [ ] Check if guest
+ - [x] Auth middleware
+ - [x] Use auth middleware
+ - [] Check if guest
  - [ ] Verify token
- - [ ] Handle invalid token
+ - [x] Handle invalid token
  - [ ] Attach user to request
  - [ ] Attach user data to handlebars context
 9. Authorization
@@ -74,8 +74,8 @@
  - [ ] Create isGuest middleware
  - [ ] Add route guards
 10. Dynamic content
- - [ ] Dynamic navigation
- - [ ] Dynamic titles
+ - [x] Dynamic navigation
+ - [x] Dynamic titles
 11. Error Handling
  - [ ] Add notification
  - [ ] Error message in notification

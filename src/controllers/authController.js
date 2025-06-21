@@ -17,7 +17,7 @@ authController.post("/register", async (req, res) => {
     try {
         const token = await authService.register(email, password, rePassword);
 
-        res.cookie('auth', token);
+        res.cookie(process.env.COOKIE_NAME, token);
 
         console.log("User registered successfully");
 
@@ -55,7 +55,7 @@ authController.post("/login", async (req, res) => {
 
     try {
         const token = await authService.login(email, password);
-        res.cookie('auth', token);
+        res.cookie(process.env.COOKIE_NAME, token);
         res.redirect("/");
     } catch (err) {
         const errorMessage = getErrorMessage(err);

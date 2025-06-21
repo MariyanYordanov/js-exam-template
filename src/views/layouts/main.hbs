@@ -7,6 +7,11 @@
     <title>JS Exam {{#if pageTitle}} | {{pageTitle}}{{/if}}</title>
 </head>
 <body>
+    {{#if error}}
+    <div class="error-container">
+        <p> {{error}}</p>
+    </div>
+    {{/if}}
     {{> nav }}
     <main>
         {{{ body }}}
