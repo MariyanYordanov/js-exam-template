@@ -14,6 +14,13 @@ authController.post("/register", async (req, res) => {
 
     const { email, password, rePassword } = req.body;
 
+    if (!email || !password || !rePassword) {
+        return res.status(400).render("auth/register", {
+            error: "All fields are required",
+            email,
+            pageTitle: "Register"
+        });
+    }
     try {
         const token = await authService.register(email, password, rePassword);
 
@@ -42,6 +49,7 @@ authController.get("/login", (req, res) => {
 });
 
 authController.post("/login", async (req, res) => {
+    
     const { email, password } = req.body;
 
     if (!email || !password) {
