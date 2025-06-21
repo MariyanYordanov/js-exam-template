@@ -1,21 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Exam {{#if pageTitle}} | {{pageTitle}}{{/if}}</title>
+    <style>
+        .alert {
+            padding: 10px 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .alert-warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+    </style>
 </head>
+
 <body>
-    {{#if error}}
-    <div class="error-container">
-        <p> {{error}}</p>
+    <!-- Flash messages -->
+    {{#if successMessage}}
+    <div class="alert alert-success">
+        {{successMessage}}
     </div>
     {{/if}}
+
+    {{#if errorMessage}}
+    <div class="alert alert-error">
+        {{errorMessage}}
+    </div>
+    {{/if}}
+
+    {{#if warningMessage}}
+    <div class="alert alert-warning">
+        {{warningMessage}}
+    </div>
+    {{/if}}
+
     {{> nav }}
     <main>
         {{{ body }}}
     </main>
     {{> footer }}
 </body>
-</html>     
+
+</html>

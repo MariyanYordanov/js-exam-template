@@ -11,6 +11,7 @@ import { auth } from "./middlewares/authMiddleware.js";
 import { tempDataMiddleware } from "./middlewares/tempDataMiddleware.js";
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static('src/public'));
 app.use(cookieParser());
@@ -32,6 +33,6 @@ connectDB();
 
 app.use(routes);
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server is listening on http://localhost:${process.env.PORT}`);
+app.listen(PORT, () => {
+    console.log(`Server is listening on http://localhost:${PORT}`);
 });
