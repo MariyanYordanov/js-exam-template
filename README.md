@@ -7,14 +7,14 @@
  - [x] Add Dev Script
  - [x] Config Debugging
 2. Express
- - [ ] Install express `npm i express`
- - [ ] Init express server
- - [ ] Add public resources
- - [ ] Setup static middleware
- - [ ] Add body parser middleware `app.use(express.urlencoded());`
- - [ ] Add home controller
- - [ ] Setup routes file
- - [ ] Add error page
+ - [x] Install express `npm i express`
+ - [x] Init express server
+ - [ ] Add public resources in public - css, html resources
+ - [x] Setup static middleware
+ - [x] Add body parser middleware `app.use(express.urlencoded());`
+ - [x] Add home controller
+ - [x] Setup routes file
+ - [x] Add error page
 3. Handlebars
  - [ ] Install handlebars `npm i express-handlebars`
  - [ ] Config handlebars as view enging
