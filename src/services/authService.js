@@ -1,6 +1,7 @@
 import User from '../models/User.js';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+
 async function register(email, password, rePassword) {
 
     if (password !== rePassword) {
@@ -15,8 +16,6 @@ async function register(email, password, rePassword) {
     const user = await User.create({ email, password });
 
     const token = generateToken(user);
-
-    console.log("User registered successfully");
 
     return token;
 }
@@ -45,12 +44,10 @@ function logout(req, res) {
     res.clearCookie(process.env.COOKIE_NAME);
 
     res.locals.user = null;
-
     req.user = null;
 
-    console.log("User logged out successfully");
+    console.log('User logout successfully!');
 }
-
 function generateToken(user) {
 
     const payload = { id: user._id, email: user.email };
