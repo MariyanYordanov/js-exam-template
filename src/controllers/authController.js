@@ -4,13 +4,13 @@ import { getErrorMessage } from "../utils/errorUtils.js";
 
 const authController = Router();
 
-authController.get("auth/register", (req, res) => {
+authController.get("/register", (req, res) => {
 
     res.render("auth/register", { pageTitle: "Register" });
 
 });
 
-authController.post("auth/register", async (req, res) => {
+authController.post("/register", async (req, res) => {
 
     const { email, password, rePassword } = req.body;
 
@@ -35,40 +35,30 @@ authController.post("auth/register", async (req, res) => {
     }
 });
 
-authController.get("auth/login", (req, res) => {
+authController.get("/login", (req, res) => {
 
     res.render("auth/login", { pageTitle: "Login" });
 
 });
 
-authController.post("auth/login", async (req, res) => {
-
+authController.post("/login", async (req, res) => {
     const { email, password } = req.body;
 
     if (!email || !password) {
-
-        const errorMessage = getErrorMessage(err);
-
         res.status(400).render("auth/login", {
-            error: errorMessage,
+            error: "All fields are required",
             email,
             pageTitle: "Login"
         });
         return;
-    }   
+    }
 
     try {
-        
         const token = await authService.login(email, password);
-
         res.cookie('auth', token);
-
         res.redirect("/");
-
     } catch (err) {
-
         const errorMessage = getErrorMessage(err);
-
         res.status(400).render("auth/login", {
             error: errorMessage,
             email,
@@ -77,7 +67,7 @@ authController.post("auth/login", async (req, res) => {
     }
 });
 
-authController.get("auth/logout", (req, res) => {
+authController.get("/logout", (req, res) => {
     authService.logout(req, res);
     res.redirect("/");
 });
