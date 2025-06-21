@@ -39,24 +39,24 @@
  - [x] Modify register form
  - [x] Create post register action
  - [x] Add user service with register
- - [ ] Hash password
- - [ ] Check rePassword
- - [ ] Check if user exists
- - [ ] Register user
+ - [x] Hash password
+ - [x] Check rePassword
+ - [x] Check if user exists
+ - [x] Register user
 6. Login
- - [ ] Add jsonwebtoken `npm i jsonwebtoken`
- - [ ] Add cookie parser `npm i cookie-parser`
- - [ ] Use cookie parser middleware
- - [ ] Add login view
- - [ ] Add login page
+ - [x] Add jsonwebtoken `npm i jsonwebtoken`
+ - [x] Add cookie parser `npm i cookie-parser`
+ - [x] Use cookie parser middleware
+ - [x] Add login view
+ - [x] Add login page
  - [ ] Fix login form 
- - [ ] Add login post action
- - [ ] Add login method to user service
- - [ ] Validate user on login
- - [ ] Validate password on login
- - [ ] Add JWT_SECRET to global config file
- - [ ] Generate jwt token
- - [ ] Attach token to cookie
+ - [x] Add login post action
+ - [x] Add login method to user service
+ - [x] Validate user on login
+ - [x] Validate password on login
+ - [x] Add JWT_SECRET to global config file
+ - [x] Generate jwt token
+ - [x] Attach token to cookie
  - [ ] Login User
  - [ ] Auto login on register
 7. Logout

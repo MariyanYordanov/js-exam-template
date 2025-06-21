@@ -1,8 +1,6 @@
 import User from '../models/User.js';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import { secret } from '../config/secret.js';
-
 async function register(email, password, rePassword) {
 
     if (password !== rePassword) {
@@ -44,7 +42,7 @@ async function login(email, password) {
 
 function logout(req, res) {
 
-    res.clearCookie('auth');
+    res.clearCookie(process.env.COOKIE_NAME);
 
     res.locals.user = null;
 
@@ -58,7 +56,7 @@ function generateToken(user) {
     const payload = { id: user._id, email: user.email };
 
     const token = jwt.sign(payload, secret, { expiresIn: '1h' });
-    
+
     return token;
 }
 

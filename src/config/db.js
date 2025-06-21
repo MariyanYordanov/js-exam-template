@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 
 async function connectDB() {
     try {
-        await mongoose.connect('mongodb://127.0.0.1:27017/', {
-            dbName: '<dbname>',
+        await mongoose.connect(process.env.DB_CONNECTION_STRING, {
+            dbName: process.env.DB_NAME,
         });
         console.log("Connected to MongoDB");
     } catch (error) {

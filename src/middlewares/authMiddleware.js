@@ -1,21 +1,20 @@
 import jwt from 'jsonwebtoken';
-import { secret } from '../config/secret.js';
 
 export const auth = (req, res, next) => {
-    const token = req.cookies.auth;
+    const token = req.cookies[process.env.COOKIE_NAME];
 
     if (!token) {
         return next();
     }
 
     try {
-        const { id, email } = jwt.verify(token, secret);
+        const { id, email } = jwt.verify(token, process.env.JWT_SECRET);
         req.user = { id, email };
         res.locals.user = { id, email };
         next();
     } catch (err) {
         console.error("Invalid token:", err);
-        res.clearCookie('auth');
+        res.clearCookie(process.env.COOKIE_NAME);
         res.redirect('/auth/login');
     }
 }
