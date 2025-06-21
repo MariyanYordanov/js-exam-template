@@ -3,9 +3,9 @@
 1. Initialize Project
  - [x] Init npm project `npm init --yes`
  - [x] Change module system
- - [ ] Add start file `/src/index.js`
- - [ ] Add Dev Script
- - [ ] Config Debugging
+ - [x] Add start file `/src/index.js`
+ - [x] Add Dev Script
+ - [x] Config Debugging
 2. Express
  - [ ] Install express `npm i express`
  - [ ] Init express server

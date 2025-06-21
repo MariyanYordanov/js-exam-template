@@ -4,7 +4,7 @@
   "description": "Template for JS Back-End Exam",
   "main": "index.js",
   "scripts": {
-    "dev"
+    "dev": "node --watch ./src/index.js"
   },
   "keywords": [],
   "author": "",
