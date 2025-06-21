@@ -1,16 +1,15 @@
 import { Router } from "express";
 import authService from "../services/authService.js";
 import { getErrorMessage } from "../utils/errorUtils.js";
+import { isGuest, isAuthenticated } from "../middlewares/authMiddleware.js";
 
 const authController = Router();
 
-authController.get("/register", (req, res) => {
-
+authController.get("/register", isGuest, (req, res) => {
     res.render("auth/register", { pageTitle: "Register" });
-
 });
 
-authController.post("/register", async (req, res) => {
+authController.post("/register", isGuest, async (req, res) => {
 
     const { email, password, rePassword } = req.body;
 
@@ -23,11 +22,8 @@ authController.post("/register", async (req, res) => {
     }
     try {
         const token = await authService.register(email, password, rePassword);
-
         res.cookie(process.env.COOKIE_NAME, token);
-
         console.log("User registered successfully");
-
         res.redirect("/");
 
     } catch (err) {
@@ -42,23 +38,20 @@ authController.post("/register", async (req, res) => {
     }
 });
 
-authController.get("/login", (req, res) => {
-
+authController.get("/login", isGuest, (req, res) => {
     res.render("auth/login", { pageTitle: "Login" });
-
 });
 
-authController.post("/login", async (req, res) => {
+authController.post("/login", isGuest, async (req, res) => {
 
     const { email, password } = req.body;
 
     if (!email || !password) {
-        res.status(400).render("auth/login", {
+        return res.status(400).render("auth/login", {
             error: "All fields are required",
             email,
             pageTitle: "Login"
         });
-        return;
     }
 
     try {
@@ -75,7 +68,7 @@ authController.post("/login", async (req, res) => {
     }
 });
 
-authController.get("/logout", (req, res) => {
+authController.get("/logout", isAuthenticated, (req, res) => {
     authService.logout(req, res);
     res.redirect("/");
 });

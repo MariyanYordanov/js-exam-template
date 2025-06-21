@@ -70,9 +70,9 @@
  - [ ] Attach user to request
  - [ ] Attach user data to handlebars context
 9. Authorization
- - [ ] Create isAuth middleware
+ - [x] Create isAuth middleware
  - [ ] Create isGuest middleware
- - [ ] Add route guards
+ - [w] Add route guards
 10. Dynamic content
  - [x] Dynamic navigation
  - [x] Dynamic titles
